@@ -3,7 +3,7 @@
     <SidebarVue/>
     <section class="flex md:absolute top-0 left-72 flex-col md:max-w-5xl md:w-full py-20 rounded z-[2] bg-white">
         <div class="flex bg-blue-300 rounded-sm p-2">
-            <h1 class="font-semibold text-blue-600">Update Barang</h1>
+            <h1 class="font-semibold text-blue-600">Update Supplier</h1>
         </div>
         <form @submit.prevent="updateSupplier()" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">

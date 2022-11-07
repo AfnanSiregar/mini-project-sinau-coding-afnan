@@ -15,7 +15,6 @@ export default{
   }
 }
 </script>
-
 <template>
   <router-view />
   <FooterVue/>

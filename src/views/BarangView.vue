@@ -64,11 +64,11 @@
                     <tr v-for="(dataTable, index) in result" :key="dataTable.id">
                         <td class="border border-black text-center">{{(index+awal) + 1}}</td>
                         <td class="border border-black pl-1">{{dataTable.namaBarang}}</td>
-                        <td class="border border-black pl-1">{{dataTable.stok}}</td>
-                        <td class="border border-black pl-1">{{dataTable.harga}}</td>
+                        <td class="border border-black text-center">{{dataTable.stok}}</td>
+                        <td class="border border-black text-center">{{dataTable.harga}}</td>
                         <td class="border border-black pl-1">{{dataTable?.supplier?.namaSupplier}}</td>
                         <td class="border border-black pl-1">{{dataTable?.supplier?.alamat}}</td>
-                        <td class="border border-black pl-1">{{dataTable?.supplier?.noTelp}}</td>
+                        <td class="border border-black text-center">{{dataTable?.supplier?.noTelp}}</td>
                         <td class="border border-black pl-1 space-x-1">
                             <button class="hover:text-red-800 underline pl-6 py-1 text-md text-red-500"
                                 @click="deleteBarang(dataTable.id)">

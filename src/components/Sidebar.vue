@@ -29,7 +29,7 @@
             </button>
         </div>
     </section>  
-    <section class="w-full md:fixed top-[450px] md:max-w-xs items-center md:pl-2 md:pr-24 z-[1]">
+    <section class="w-full md:fixed top-[450px] md:max-w-xs items-center md:pl-2 md:pr-24 z-[1] text-center">
         <div class="shadow-2xl py-2 bg-blue-300 text-center rounded">
             <h1 class="font-semibold text-blue-600">Online</h1>
         </div>

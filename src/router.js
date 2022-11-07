@@ -49,7 +49,6 @@ const router = createRouter({
   routes,
 });
 
-
 router.beforeEach((to, from, next) => {
   if (localStorage.getItem("token") === null && to.path === "/barang" || 
     localStorage.getItem("token") === null && to.path === "/supplier" || 
