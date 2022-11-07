@@ -8,7 +8,7 @@
         <div class="flex flex-row justify-between items-center p-2 bg-inherit font-semibold">
             <h1 class="text-2xl">Barang</h1>
             <div class="flex justify-end">
-                <!-- <router-link class="bg-blue-600 text-white hover:bg-blue-700 rounded-md py-2 px-2">Tambah Barang</router-link> -->
+                <router-link class="bg-blue-600 text-white hover:bg-blue-700 rounded-md py-2 px-2" to="/tambah-barang">Tambah Barang</router-link>
             </div>
         </div>
         <div class="flex items-center justify-start pl-3 pt-3 space-x-2">
@@ -35,7 +35,7 @@
             <button onclick="window.location.reload();" class="bg-red-600 text-white hover:bg-black/25 px-2 py-1 rounded-md">Refresh</button>
         </div>
         <div class="px-3 py-3 rounded-lg shadow-lg">
-            <table class="w-full border text-left table-auto" v-if="result">
+            <table class="w-full border" v-if="result">
                 <thead class="bg-slate-300 text-center">
                     <tr>
                         <th class="border border-black">NO</th>
@@ -60,7 +60,7 @@
                         <td class="border border-black pl-1"></td>
                     </tr>
                 </tbody>
-                <tbody v-else>
+                <tbody v-else class="pl-2">
                     <tr v-for="(dataTable, index) in result" :key="dataTable.id">
                         <td class="border border-black text-center">{{(index+awal) + 1}}</td>
                         <td class="border border-black pl-1">{{dataTable.namaBarang}}</td>
@@ -69,10 +69,19 @@
                         <td class="border border-black pl-1">{{dataTable?.supplier?.namaSupplier}}</td>
                         <td class="border border-black pl-1">{{dataTable?.supplier?.alamat}}</td>
                         <td class="border border-black pl-1">{{dataTable?.supplier?.noTelp}}</td>
-                        <td class="border border-black pl-1"></td>
+                        <td class="border border-black pl-1 space-x-1">
+                            <button class="hover:text-red-800 underline pl-6 py-1 text-md text-red-500"
+                                @click="deleteBarang(dataTable.id)">
+                            Hapus
+                            </button>
+                            <router-link class="hover:text-indigo-800 px-1 py-1 text-md text-indigo-500 underline"
+                                :to="`/update-barang/${dataTable.id}`">
+                            Update
+                            </router-link>
+                        </td>
                     </tr>
                 </tbody>
-                <tfoot v-if="limit > 15" class="bg-slate-300 text-center">
+                <tfoot v-if="limit > 10" class="bg-slate-300 text-center">
                     <tr>
                         <th class="border border-black">NO</th>
                         <th class="border border-black">Nama Barang</th>
@@ -171,7 +180,19 @@ export default {
             this.hasilCari = pencarian;
             console.log(search);
             console.log(this.hasilCari);
+        },
+        async deleteBarang(id){
+            await axios.delete("http://159.223.57.121:8090/barang/delete/" + id,{
+                headers:{
+                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                    "Content-Type": "application/json",
+                },
+            }).then(async (response)=>{
+                await response.data;
+                window.location.reload();
+            })
         }
+
     }
 }
 </script>

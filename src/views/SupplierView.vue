@@ -8,7 +8,7 @@
         <div class="flex flex-row justify-between items-center p-2 bg-inherit font-semibold">
             <h1 class="text-2xl">Supplier</h1>
             <div class="flex justify-end">
-                <!-- <router-link class="bg-blue-700 hover:bg-blue-700 rounded-md text-white py-2 px-2" to="/tambah-barang">Tambah Supplier</router-link> -->
+                <router-link class="bg-blue-700 hover:bg-blue-700 rounded-md text-white py-2 px-2" to="/tambah-supplier">Tambah Supplier</router-link>
             </div>
         </div>
         <div class="flex items-center justify-start pl-3 pt-3 space-x-2">
@@ -24,7 +24,7 @@
                     20
                 </button>
             </div>
-            <form @submit.prevent="cariBarang" class="pl-1 text-center">
+            <form @submit.prevent="cariSupplier" class="pl-1 text-center">
                 Cari Barang
                 <label for="cari">
                     <input type="text" v-model="search" class="py-[2px] border border-blue-300 rounded-sm leading-tight focus:outline-blue-400" id="cari" name="cari" required>
@@ -35,7 +35,7 @@
             <button onclick="window.location.reload();" class="bg-red-600 text-white hover:bg-black/25 px-2 py-1 rounded-md">Refresh</button>
         </div>
         <div class="px-3 py-3 rounded-lg shadow-lg">
-            <table class="w-full border text-left table-auto" v-if="result">
+            <table class="w-full border" v-if="result">
                 <thead class="bg-slate-300 text-center">
                     <tr>
                         <th class="border border-black">NO</th>
@@ -54,16 +54,25 @@
                         <td class="border border-black pl-1"></td>
                     </tr>
                 </tbody>
-                <tbody v-else>
+                <tbody v-else class="pl-2">
                     <tr v-for="(dataSupp, index) in result" :key="dataSupp.id">
                         <td class="border border-black text-center">{{(index+awal) + 1}}</td>
                         <td class="border border-black pl-1">{{dataSupp.namaSupplier}}</td>
                         <td class="border border-black pl-1">{{dataSupp.alamat}}</td>
                         <td class="border border-black pl-1">{{dataSupp.noTelp}}</td>
-                        <td class="border border-black pl-1"></td>
+                        <td class="border border-black pl-20 space-x-1">
+                            <button class="hover:text-red-800 underline pl-6 py-1 text-md text-red-500"
+                                @click="deleteSupplier(dataSupp.id)">
+                            Hapus
+                            </button>
+                            <router-link class="hover:text-indigo-800 px-1 py-1 text-md text-indigo-500 underline"
+                                :to="`/update-supplier/${dataSupp.id}`">
+                            Update
+                            </router-link>
+                        </td>
                     </tr>
                 </tbody>
-                <tfoot v-if="limit > 15" class="bg-slate-300 text-center">
+                <tfoot v-if="limit > 10" class="bg-slate-300 text-center">
                     <tr>
                         <th class="border border-black">NO</th>
                         <th class="border border-black">Nama</th>
@@ -152,13 +161,24 @@ export default {
             this.limit = 10;
             this.getSupplier()
         },
-        cariBarang(){
+        cariSupplier(){
             const pencarian = this.result.filter((supplier)=>{
                 return supplier.namaSupplier.toLowerCase().includes(this.search);
             });
             this.hasilCari = pencarian;
             console.log(search);
             console.log(this.hasilCari);
+        },
+        async deleteSupplier(id){
+            await axios.delete("http://159.223.57.121:8090/supplier/delete/" + id,{
+                headers:{
+                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                    "Content-Type": "application/json",
+                },
+            }).then(async (response)=>{
+                await response.data;
+                window.location.reload();
+            })
         }
     }
     
