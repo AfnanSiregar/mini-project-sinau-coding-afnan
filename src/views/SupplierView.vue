@@ -63,7 +63,7 @@
                         <td class="border border-black pl-1"></td>
                     </tr>
                 </tbody>
-                <tfoot v-if="limit > 10" class="bg-slate-300 text-center">
+                <tfoot v-if="limit > 15" class="bg-slate-300 text-center">
                     <tr>
                         <th class="border border-black">NO</th>
                         <th class="border border-black">Nama</th>

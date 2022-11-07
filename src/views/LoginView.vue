@@ -44,7 +44,8 @@ export default {
     data: function(){
         return{
             username: '',
-            password: ''
+            password: '',
+            profileName: ''
         }
     },
     methods:{
@@ -54,10 +55,10 @@ export default {
                 password: this.password
             }).then(async (response)=>{
                 localStorage.setItem("token", response.data.data.token);
-                console.log(response);
+                localStorage.setItem("profileName", response.data.data.profileName);
                 this.$router.push('/barang');
             })
-        }
+        },
     }
 }
 </script>

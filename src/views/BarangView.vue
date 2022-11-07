@@ -62,7 +62,7 @@
                 </tbody>
                 <tbody v-else>
                     <tr v-for="(dataTable, index) in result" :key="dataTable.id">
-                        <td class="border border-black text-center">{{index + 1}}</td>
+                        <td class="border border-black text-center">{{(index+awal) + 1}}</td>
                         <td class="border border-black pl-1">{{dataTable.namaBarang}}</td>
                         <td class="border border-black pl-1">{{dataTable.stok}}</td>
                         <td class="border border-black pl-1">{{dataTable.harga}}</td>
@@ -72,7 +72,7 @@
                         <td class="border border-black pl-1"></td>
                     </tr>
                 </tbody>
-                <tfoot class="bg-slate-300 text-center">
+                <tfoot v-if="limit > 15" class="bg-slate-300 text-center">
                     <tr>
                         <th class="border border-black">NO</th>
                         <th class="border border-black">Nama Barang</th>
@@ -113,7 +113,8 @@ export default {
             result: [],
             limit: 10,
             search: '',
-            hasilCari: []
+            hasilCari: [],
+            awal: 0
         }
     },
     created(){
@@ -132,7 +133,12 @@ export default {
                 }
             })
             this.result = await data.data;
-            console.log(this.result);
+            if(this.offset > 1){
+                this.awal = (this.offset*this.limit) - this.limit
+            }else{
+                this.awal = 0
+            }
+
         },
         next(){
             this.offset++;
