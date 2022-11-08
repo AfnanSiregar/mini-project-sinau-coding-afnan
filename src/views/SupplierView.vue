@@ -32,7 +32,7 @@
                 <span class="pl-2"></span>
                 <button type="submit" class="bg-yellow-400 hover:bg-black/25 px-2 py-1 rounded-md">Search</button>
             </form>
-            <button onclick="window.location.href = window.location.href;" class="bg-red-600 text-white hover:bg-black/25 px-2 py-1 rounded-md">Refresh</button>
+            <button @click="this.$router.go()" class="bg-red-600 text-white hover:bg-black/25 px-2 py-1 rounded-md">Refresh</button>
         </div>
         <div class="px-3 py-3 rounded-lg shadow-lg">
             <table class="w-full border" v-if="result">
@@ -166,9 +166,7 @@ export default {
                 },
             }).then(async (response)=>{
                 await response.data;
-                if (response.status === 200 ){
-                    location.reload();
-                }
+                this.$router.go()
             })
         }
     }
