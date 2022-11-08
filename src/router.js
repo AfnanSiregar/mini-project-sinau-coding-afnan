@@ -36,26 +36,10 @@ const routes = [
   {
     path: "/update-barang/:id",
     component: UpdateBarangView,
-    beforeEnter(to, from){
-      if(!exist) return {
-        name: 'NotFound',
-        params: {pathMatch: to.path.split('/barang').slice(1)},
-        query: to.query,
-        hash: to.hash
-      }
-    }
   },
   {
     path: "/update-supplier/:id",
     component: UpdateSupplierView,
-    beforeEnter(to, from){
-      if(!exist) return {
-        name: 'NotFound',
-        params: {pathMatch: to.path.split('/supplier').slice(1)},
-        query: to.query,
-        hash: to.hash
-      }
-    }
   },
   {
     path: "/:pathMatch(.*)*",
@@ -79,9 +63,7 @@ router.beforeEach((to, from, next) => {
   if (localStorage.getItem("token") === null && to.path === "/barang" || 
     localStorage.getItem("token") === null && to.path === "/supplier" || 
     localStorage.getItem("token") === null && to.path === "/tambah-barang" || 
-    localStorage.getItem("token") === null && to.path === "/tambah-supplier" || 
-    localStorage.getItem("token") === null && to.path === "/update-barang"|| 
-    localStorage.getItem("token") === null && to.path === "/update-supplier") {
+    localStorage.getItem("token") === null && to.path === "/tambah-supplier") {
       router.push("/");
   }else next()
 });

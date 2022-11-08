@@ -60,7 +60,7 @@
                         <td class="border border-black pl-1">{{dataSupp.namaSupplier}}</td>
                         <td class="border border-black pl-1">{{dataSupp.alamat}}</td>
                         <td class="border border-black text-center">{{dataSupp.noTelp}}</td>
-                        <td class="border border-black pl-20 space-x-1">
+                        <td class="border border-black pl-12 space-x-1">
                             <button class="hover:text-red-800 underline pl-6 py-1 text-md text-red-500"
                                 @click="deleteSupplier(dataSupp.id)">
                             Hapus
