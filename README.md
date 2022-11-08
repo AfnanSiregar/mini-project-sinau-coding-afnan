@@ -13,3 +13,5 @@ This template should help get you started developing with Vue 3 in Vite. The tem
   <br>
   ![alt text](https://i.stack.imgur.com/iwBRO.png)
   ![alt text](https://i.stack.imgur.com/VgkNP.png)
+
+seperti yang tertera di atas, pilih allow/izinkan di bagian insecure content/konten tidak aman dan refresh lagi halaman browsernya
