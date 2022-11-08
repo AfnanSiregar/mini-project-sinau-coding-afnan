@@ -1,8 +1,9 @@
 ## Langkah-langkah membuka project ini dari situs web
-  Project ini sudah di deploy melalui vercel dan sudah bisa di akses melalui URL, tekan [https://miniproject-sinaucoding-afnan.vercel.app/](https://miniproject-sinaucoding-afnan.vercel.app/) untuk mengaksesnya.
+  Project ini sudah di deploy melalui [Vercel](https://vercel.com/) dan sudah bisa di akses melalui URL, tekan [https://miniproject-sinaucoding-afnan.vercel.app/](https://miniproject-sinaucoding-afnan.vercel.app/) untuk mengaksesnya.
   Namun browser kita akan menganggap ini sebagai situs tidak aman dan akan stuck di tampilan login atau register saja.
   Untuk memaksa browser kita (Chrome) membuka situs ini yaitu dengan mengizinkan insecure content(konten tidak aman) dengan cara:
-  <br>
+  
+  
   ![alt text](https://i.stack.imgur.com/iwBRO.png)
   ![alt text](https://i.stack.imgur.com/VgkNP.png)
 
