@@ -36,10 +36,31 @@ const routes = [
   {
     path: "/update-barang/:id",
     component: UpdateBarangView,
+    beforeEnter(to, from){
+      if(!exist) return {
+        name: 'NotFound',
+        params: {pathMatch: to.path.split('/barang').slice(1)},
+        query: to.query,
+        hash: to.hash
+      }
+    }
   },
   {
     path: "/update-supplier/:id",
     component: UpdateSupplierView,
+    beforeEnter(to, from){
+      if(!exist) return {
+        name: 'NotFound',
+        params: {pathMatch: to.path.split('/supplier').slice(1)},
+        query: to.query,
+        hash: to.hash
+      }
+    }
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: ()=> import('./views/NotFound.vue')
   },
 
 ];
@@ -47,6 +68,11 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.url.BASE_URL),
   routes,
+  scrollBehavior (to, from, savedPosition){
+    return savedPosition || new Promise((resolve) => {
+      setTimeout(()=> resolve({ top: 0, behavior: 'smooth'}), 100)
+    })
+  }
 });
 
 router.beforeEach((to, from, next) => {
