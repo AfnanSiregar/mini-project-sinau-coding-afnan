@@ -81,10 +81,9 @@ export default {
                 }
             })
             .then(({ data }) => {
-                const input = this.dataBarang
-                input.namaBarang = data.data.namaBarang
-                input.stok = data.data.stok
-                input.harga = data.data.harga
+                this.dataBarang.namaBarang = data.data.namaBarang
+                this.dataBarang.stok = data.data.stok
+                this.dataBarang.harga = data.data.harga
                 this.name = data.data?.supplier.namaSupplier
                 this.id = data.data?.supplier.id
             })

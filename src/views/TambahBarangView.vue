@@ -26,9 +26,10 @@
             </div>
             <div class="mb-10">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="harga">
-                    Nama Supplier
+                    Supplier Barang
                 </label>
-                <select v-model="dataBarang.supplier" name="harga" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="noTelp" placeholder="Masukkan No. Telp Supplier" required>
+                <select v-model="dataBarang.supplier" name="harga" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" id="noTelp" placeholder="Masukkan No. Telp Supplier" required>
+                    <option value="" disabled selected>Pilih Supplier</option>
                     <option v-for="(data) in dataSupplier" v-bind:key="data" :value="data">
                         {{data.namaSupplier}}
                     </option>

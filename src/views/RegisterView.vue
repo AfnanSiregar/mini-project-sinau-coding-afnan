@@ -33,7 +33,7 @@
                     <input type="password" v-model="password" id="password" name="password" class="w-full border shadow py-2 px-3 focus:outline-blue-300" placeholder="Enter Password" required>
                 </label>
                 <div class="flex flex-col items-center">
-                    <button type="submit" @click="showAlert" class="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded-md text-white">Daftar</button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded-md text-white">Daftar</button>
                     <router-link to="/" class="pt-5 underline text-blue-400 hover:text-blue-600">Sudah punya akun</router-link>
                 </div>
             </form>
@@ -59,14 +59,9 @@ export default {
                 password: this.password
             }).then(async (response)=>{
                 await response.data;
+                alert('Registrasi Berhasil!');
                 this.$router.push('/');
-                this.username = '',
-                this.profileName = '',
-                this.password = ''
             });
-        },
-        showAlert(){
-            alert("Registrasi Berhasil!");
         }
     }
 }

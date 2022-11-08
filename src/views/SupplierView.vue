@@ -32,7 +32,7 @@
                 <span class="pl-2"></span>
                 <button type="submit" class="bg-yellow-400 hover:bg-black/25 px-2 py-1 rounded-md">Search</button>
             </form>
-            <button onclick="window.location.reload();" class="bg-red-600 text-white hover:bg-black/25 px-2 py-1 rounded-md">Refresh</button>
+            <button onclick="location.reload();" class="bg-red-600 text-white hover:bg-black/25 px-2 py-1 rounded-md">Refresh</button>
         </div>
         <div class="px-3 py-3 rounded-lg shadow-lg">
             <table class="w-full border" v-if="result">
@@ -72,15 +72,6 @@
                         </td>
                     </tr>
                 </tbody>
-                <tfoot v-if="limit > 10" class="bg-slate-300 text-center">
-                    <tr>
-                        <th class="border border-black">NO</th>
-                        <th class="border border-black">Nama</th>
-                        <th class="border border-black">Alamat</th>
-                        <th class="border border-black">No Telp</th>
-                        <th class="border border-black">Action</th>
-                    </tr>
-                </tfoot>
             </table>
             <div class="flex items-center space-x-4 justify-end py-2">
                 <button class="bg-gray-200 hover:bg-black/25 p-2 rounded-md" @click="prev()">
@@ -175,7 +166,7 @@ export default {
                 },
             }).then(async (response)=>{
                 await response.data;
-                window.location.reload();
+                location.reload();
             })
         }
     }
