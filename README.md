@@ -10,5 +10,6 @@ This template should help get you started developing with Vue 3 in Vite. The tem
   Project ini sudah di deploy melalui vercel dan sudah bisa di akses melalui URL, tekan [Disini](https://miniproject-sinaucoding-afnan.vercel.app/) unutk mengaksesnya.
   Namun browser kita akan menganggap ini sebagai situs tidak aman dan akan stuck di tampilan login atau register saja.
   Untuk memaksa browser kita (Chrome) membuka situs ini yaitu dengan mengizinkan insecure content(konten tidak aman) dengan cara:
+  <br>
   ![alt text](https://i.stack.imgur.com/iwBRO.png)
   ![alt text](https://i.stack.imgur.com/VgkNP.png)
