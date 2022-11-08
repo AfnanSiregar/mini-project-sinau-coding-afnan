@@ -73,7 +73,7 @@ export default {
             "Content-Type": "application/json",
           },params:{
             offset: 0,
-            limit: 15
+            limit: 100
           },
         });
           this.dataSupplier = await data.data;
@@ -84,7 +84,7 @@ export default {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
                     'Content-Type': 'application/json'
                 }
-            }).then(() => {
+            }).then((data) => {
                 this.$router.push("/barang");
             })
         }

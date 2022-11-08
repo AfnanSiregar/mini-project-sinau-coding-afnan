@@ -70,7 +70,7 @@
                         <td class="border border-black pl-1">{{dataTable?.supplier?.alamat}}</td>
                         <td class="border border-black text-center">{{dataTable?.supplier?.noTelp}}</td>
                         <td class="border border-black pl-1 space-x-1">
-                            <button class="hover:text-red-800 underline pl-6 py-1 text-md text-red-500"
+                            <button class="hover:text-red-800 underline pl-2 py-1 text-md text-red-500"
                                 @click="deleteBarang(dataTable.id)">
                             Hapus
                             </button>
@@ -178,8 +178,6 @@ export default {
                 return barang.namaBarang.toLowerCase().includes(this.search);
             });
             this.hasilCari = pencarian;
-            console.log(search);
-            console.log(this.hasilCari);
         },
         async deleteBarang(id){
             await axios.delete("http://159.223.57.121:8090/barang/delete/" + id,{

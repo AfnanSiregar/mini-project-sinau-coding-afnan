@@ -83,8 +83,8 @@ export default {
             .then(({ data }) => {
                 const input = this.dataBarang
                 input.namaBarang = data.data.namaBarang
-                input.harga = data.data.harga
                 input.stok = data.data.stok
+                input.harga = data.data.harga
                 this.name = data.data?.supplier.namaSupplier
                 this.id = data.data?.supplier.id
             })
@@ -101,7 +101,6 @@ export default {
           },
         });
           this.items = await data.data;
-          console.log(this.items);
         },
         async updateBarang(){
             const id = this.$route.params.id;
@@ -111,6 +110,7 @@ export default {
                     'Content-Type': 'application/json'
                 }
             }).then(({ data }) => {
+                console.log(data);
                 this.$router.push("/barang");
             })
         }

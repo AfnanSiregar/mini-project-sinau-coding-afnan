@@ -58,10 +58,7 @@ export default {
                 profileName: this.profileName,
                 password: this.password
             }).then(async (response)=>{
-                const data = await response.data;
-                if(data.status === true){
-                    console.log('Registrasi Berhasil');
-                }
+                await response.data;
                 this.$router.push('/');
                 this.username = '',
                 this.profileName = '',

@@ -166,8 +166,6 @@ export default {
                 return supplier.namaSupplier.toLowerCase().includes(this.search);
             });
             this.hasilCari = pencarian;
-            console.log(search);
-            console.log(this.hasilCari);
         },
         async deleteSupplier(id){
             await axios.delete("http://159.223.57.121:8090/supplier/delete/" + id,{
