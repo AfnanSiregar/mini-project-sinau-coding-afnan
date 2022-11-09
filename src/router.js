@@ -1,45 +1,46 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from './views/LoginView.vue'
-import RegisterView from './views/RegisterView.vue'
-import BarangView from './views/BarangView.vue'
-import SupplierView from './views/SupplierView.vue'
-import TambahSupplierView from './views/TambahSupplierView.vue'
-import TambahBarangView from './views/TambahBarangView.vue'
-import UpdateBarangView from './views/UpdateBarangView.vue'
-import UpdateSupplierView from './views/UpdateSupplierView.vue'
 
 const routes = [
   {
     path: "/",
+    name: "login",
     component: LoginView,
   },
   {
     path: "/register",
-    component: RegisterView,
+    name: "register",
+    component: ()=>import("./views/RegisterView.vue"),
   },
   {
     path: "/barang",
-    component: BarangView,
+    name: "barang",
+    component: ()=>import("./views/BarangView.vue"),
   },
   {
     path: "/supplier",
-    component: SupplierView,
+    name: "supplier",
+    component: ()=>import("./views/SupplierView.vue"),
   },
   {
     path: "/tambah-supplier",
-    component: TambahSupplierView,
+    name: "tambah-supplier",
+    component: ()=>import("./views/TambahSupplierView.vue")
   },
   {
     path: "/tambah-barang",
-    component: TambahBarangView,
+    name: "tambah-barang",
+    component: ()=>import("./views/TambahBarangView.vue"),
   },
   {
     path: "/update-barang/:id",
-    component: UpdateBarangView,
+    name: "update-barang",
+    component: ()=>import("./views/UpdateBarangView.vue"),
   },
   {
     path: "/update-supplier/:id",
-    component: UpdateSupplierView,
+    name: "update-supplier",
+    component: ()=>import("./views/UpdateSupplierView.vue"),
   },
   {
     path: "/:pathMatch(.*)*",
@@ -51,6 +52,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(import.meta.url.BASE_URL),
+  linkActiveClass: 'active-link',
   routes,
   scrollBehavior (to, from, savedPosition){
     return savedPosition || new Promise((resolve) => {

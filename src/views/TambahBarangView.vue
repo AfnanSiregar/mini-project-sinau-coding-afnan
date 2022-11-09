@@ -84,8 +84,9 @@ export default {
                 headers:{
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
                     'Content-Type': 'application/json'
-                }
-            }).then((data) => {
+                },
+            }).then(() => {
+                console.log(this.dataBarang);
                 this.$router.push("/barang");
             })
         }

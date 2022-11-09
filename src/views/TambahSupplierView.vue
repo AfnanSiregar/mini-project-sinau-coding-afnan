@@ -54,6 +54,7 @@ export default {
                     'Content-Type': 'application/json'
                 }
             }).then(() => {
+                console.log(this.dataSupplier);
                 this.$router.push("/supplier");
             })
         }

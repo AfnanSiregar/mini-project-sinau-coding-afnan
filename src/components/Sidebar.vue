@@ -18,12 +18,7 @@
             <h1 class="font-semibold text-blue-600">Menu</h1>
         </div>
         <div class="bg-white shadow-2xl text-center py-2">
-            <router-link to="/barang" class="px-5 hover:text-blue-500 rounded-lg">
-                Barang
-            </router-link>
-            <router-link to="/supplier" class="px-5 hover:text-green-500 rounded-lg">
-                Supplier
-            </router-link>
+            <the-navigation/>
             <button @click="logout" class="px-5 hover:text-red-600 rounded-lg">
                 Logout
             </button>
@@ -40,7 +35,9 @@
     </section>
 </template>
 <script>
+import TheNavigation from './TheNavigation.vue';
 export default {
+  components: { TheNavigation },
     created(){
         this.showProfileName();
         setInterval(this.getNow, 1000);
