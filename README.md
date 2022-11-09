@@ -17,4 +17,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 seperti yang tertera di atas, pilih allow/izinkan di bagian insecure content/konten tidak aman dan refresh lagi halaman browsernya.
 
+
 untuk mengetahui masalah di atas lebih lanjut silahkan kunjungi link thread di StackOverflow berikut: [Page loaded over HTTPS but requested an insecure XMLHttpRequest endpoint](https://stackoverflow.com/questions/37387711/page-loaded-over-https-but-requested-an-insecure-xmlhttprequest-endpoint)
+
+Note: disarankan utk menjalankan project ini secara lokal jika tidak ingin terjadi error
