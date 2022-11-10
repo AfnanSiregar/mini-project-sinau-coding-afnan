@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+th, td{
+    @apply border border-black
+}
+table{
+    @apply w-full border
+}
