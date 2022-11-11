@@ -2,7 +2,7 @@
     <section class="flex md:flex-row flex-col justify-center p-4 md:p-0 h-screen items-center md:gap-10">
         <div class="p-4 md:max-w-md w-full">
             <div class="flex flex-col">
-                <img src="../assets/logo_sinaucoding.png" alt="logo">
+                <img src="../assets/logo_sinaucoding.png" width="100%" height="100%" alt="logo">
                 <div class="text-center">
                     <h1 class="text-blue-600 text-4xl font-bold">
                         Selamat Datang

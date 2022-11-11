@@ -25,7 +25,7 @@
                 </button>
             </div>
             <form @submit.prevent="getSupplier" class="space-x-1">
-                Cari Barang
+                Cari Supplier
                 <label for="cari">
                     <input type="text" v-model="search" class="py-[2px] border border-blue-300 rounded-sm leading-tight focus:outline-blue-400" id="cari" name="cari" required>
                 </label>
