@@ -48,25 +48,9 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody v-if="hasilCari?.length > 0">
-                    <tr v-for="(dataTable, index) in hasilCari" :key="dataTable.id">
-                        <td class="text-center">{{index + 1}}</td>
-                        <td class="pl-1">{{dataTable.namaBarang}}</td>
-                        <td class="pl-1">{{dataTable.stok}}</td>
-                        <td class="pl-1">{{dataTable.harga}}</td>
-                        <td class="pl-1">{{dataTable?.supplier?.namaSupplier}}</td>
-                        <td class="pl-1">{{dataTable?.supplier?.alamat}}</td>
-                        <td class="pl-1">{{dataTable?.supplier?.noTelp}}</td>
-                        <td class="pl-1 space-x-1">
-                            <button class="hover:text-red-800 underline pl-2 py-1 text-md text-red-500"
-                                @click="deleteBarang(dataTable.id)">
-                            Hapus
-                            </button>
-                            <router-link class="hover:text-indigo-800 px-1 py-1 text-md text-indigo-500 underline"
-                                :to="`/update-barang/${dataTable.id}`">
-                            Update
-                            </router-link>
-                        </td>
+                <tbody v-if="result < 1">
+                    <tr class="text-center">
+                        <td colspan="8">Tidak ada data</td>
                     </tr>
                 </tbody>
                 <tbody class="pl-2">
@@ -119,7 +103,6 @@ export default {
             result: [],
             limit: 10,
             search: [],
-            hasilCari: [],
             awal: 0
         }
     },

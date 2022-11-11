@@ -45,22 +45,9 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody v-if="hasilCari?.length > 0">
-                    <tr v-for="(dataSupp, index) in hasilCari" :key="dataSupp.id">
-                        <td class="text-center">{{index + 1}}</td>
-                        <td class="pl-1">{{dataSupp.namaSupplier}}</td>
-                        <td class="pl-1">{{dataSupp.alamat}}</td>
-                        <td class="pl-1">{{dataSupp.noTelp}}</td>
-                        <td class="pl-12 space-x-1">
-                            <button class="hover:text-red-800 underline pl-6 py-1 text-md text-red-500"
-                                @click="deleteSupplier(dataSupp.id)">
-                            Hapus
-                            </button>
-                            <router-link class="hover:text-indigo-800 px-1 py-1 text-md text-indigo-500 underline"
-                                :to="`/update-supplier/${dataSupp.id}`">
-                            Update
-                            </router-link>
-                        </td>
+                <tbody v-if="result < 1">
+                    <tr class="text-center">
+                        <td colspan="8">Tidak ada data</td>
                     </tr>
                 </tbody>
                 <tbody class="pl-2">
@@ -110,7 +97,6 @@ export default {
             offset: 1,
             result: [],
             limit: 10,
-            hasilCari: [],
             awal : 0,
             search: []
         }
