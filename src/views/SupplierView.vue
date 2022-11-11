@@ -8,7 +8,7 @@
         <div class="flex flex-row justify-between items-center p-2 bg-inherit font-semibold">
             <h1 class="text-2xl">Supplier</h1>
             <div class="flex justify-end">
-                <router-link class="bg-blue-700 hover:bg-blue-700 rounded-md text-white py-2 px-2" to="/tambah-supplier">Tambah Supplier</router-link>
+                <router-link class="bg-blue-600 hover:bg-blue-700 rounded-md text-white py-2 px-2" to="/tambah-supplier">Tambah Supplier</router-link>
             </div>
         </div>
         <div class="md:flex items-center justify-between pl-3 pt-3 space-x-2">
@@ -35,7 +35,7 @@
             </form>
         </div>
         <div class="px-3 py-3 rounded-lg shadow-lg">
-            <table v-if="result">
+            <table>
                 <thead class="bg-slate-300 text-center">
                     <tr>
                         <th>NO</th>
@@ -63,7 +63,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <tbody v-else class="pl-2">
+                <tbody class="pl-2">
                     <tr v-for="(dataSupp, index) in result" :key="dataSupp.id">
                         <td class="text-center">{{(index+awal) + 1}}</td>
                         <td class="pl-1">{{dataSupp.namaSupplier}}</td>

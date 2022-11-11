@@ -35,7 +35,7 @@
             </form>
         </div>
         <div class="px-3 py-3 rounded-lg shadow-lg">
-            <table v-if="result">
+            <table>
                 <thead class="bg-slate-300 text-center">
                     <tr>
                         <th>NO</th>
@@ -69,7 +69,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <tbody v-else class="pl-2">
+                <tbody class="pl-2">
                     <tr v-for="(dataTable, index) in result" :key="dataTable.id">
                         <td class="text-center">{{(index+awal) + 1}}</td>
                         <td class="pl-1">{{dataTable.namaBarang}}</td>
