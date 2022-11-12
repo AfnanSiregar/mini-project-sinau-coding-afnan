@@ -24,13 +24,15 @@
                     20
                 </button>
             </div>
-            <form @submit.prevent="getSupplier" class="space-x-1">
+            <form @submit.prevent="getSupplier" class="space-x-1 pr-5">
                 Cari Supplier
                 <label for="cari">
-                    <input type="text" v-model="search" class="py-[2px] border border-blue-300 rounded-sm leading-tight focus:outline-blue-400" id="cari" name="cari" required>
+                    <input type="text" v-model="search" class="py-[2px] border border-blue-300 rounded-sm leading-tight focus:outline-blue-400" id="cari" placeholder="Search.." name="cari" required>
                 </label>
                 <span class="pl-2"></span>
-                <button type="submit" class="bg-yellow-400 hover:bg-black/25 px-2 py-1 rounded-md">Search</button>
+                <button type="submit" class="bg-yellow-400 hover:bg-black/25 px-2 py-1 rounded-md">
+                    <ion-icon name="search" ></ion-icon>
+                </button>
                 <button @click="this.$router.go()" class="bg-red-600 text-white hover:bg-black/25 px-2 py-1 rounded-md">Refresh</button>
             </form>
         </div>
@@ -56,14 +58,14 @@
                         <td class="pl-1">{{dataSupp.namaSupplier}}</td>
                         <td class="pl-1">{{dataSupp.alamat}}</td>
                         <td class="text-center">{{dataSupp.noTelp}}</td>
-                        <td class="pl-12 space-x-1">
-                            <button class="hover:text-red-800 underline pl-6 py-1 text-md text-red-500"
+                        <td class="text-center space-x-1">
+                            <button class="hover:text-red-800 underline py-1 text-md text-red-500"
                                 @click="deleteSupplier(dataSupp.id)">
-                            Hapus
+                                <ion-icon name="trash-outline" class="text-3xl"></ion-icon>
                             </button>
-                            <router-link class="hover:text-indigo-800 px-1 py-1 text-md text-indigo-500 underline"
+                            <router-link class="hover:text-indigo-800 py-1 text-md text-indigo-500 underline"
                                 :to="`/update-supplier/${dataSupp.id}`">
-                            Update
+                                <ion-icon name="arrow-redo-outline" class="text-3xl"></ion-icon>                            
                             </router-link>
                         </td>
                     </tr>

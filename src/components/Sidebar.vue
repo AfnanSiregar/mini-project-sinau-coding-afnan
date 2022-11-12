@@ -20,13 +20,16 @@
         <div class="bg-white shadow-2xl text-center py-2">
             <the-navigation/>
             <button @click="logout" class="px-5 hover:text-red-600 rounded-lg">
+                <ion-icon name="log-out-outline"></ion-icon>
                 Logout
             </button>
         </div>
     </section>  
     <section class="w-full md:fixed top-[450px] md:max-w-xs items-center md:pl-2 md:pr-24 z-[1] text-center">
         <div class="shadow-2xl py-2 bg-blue-300 text-center rounded">
-            <h1 class="font-semibold text-blue-600">Online</h1>
+            <h1 class="font-semibold text-blue-600">Online
+                <ion-icon name="power-outline" class="text-xl"></ion-icon>
+            </h1>
         </div>
         <div class=" bg-white shadow-xl text-center py-2 flex flex-col px-6">
             Date and Time: <br>
