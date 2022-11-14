@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 th, td{
-    @apply border border-black
+    @apply border border-black 
+}
+tr{
+    @apply hover:bg-black/10
 }
 table{
     @apply w-full border

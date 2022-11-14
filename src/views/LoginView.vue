@@ -22,7 +22,7 @@
             <form @submit.prevent="login" class="flex flex-col p-4 gap-4 rounded-lg shadow">
                 <label for="username">
                     Username
-                    <input type="text" v-model="username" id="username" name="username" class="w-full border shadow py-2 px-3 focus:outline-blue-300" placeholder="Enter Username" required>
+                    <input type="text" v-model="username" id="username" name="username" class="w-full border shadow py-2 px-3 focus:outline-blue-300" placeholder="Enter Username" autofocus required>
                 </label>
                 <label for="password">
                     Password
@@ -35,7 +35,6 @@
             </form>
         </div>
     </section>
-    
 </template>
 
 <script>

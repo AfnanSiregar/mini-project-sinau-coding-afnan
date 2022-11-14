@@ -27,7 +27,7 @@
                 </div>
                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Tambah</button>
             </form>
-            <button class="md:absolute bottom-32 right-10 bg-black/75 hover:bg-black/90 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="history.back()">Kembali</button>
+            <button class="md:absolute bottom-32 right-10 bg-black/75 hover:bg-black/90 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" @click="$router.back()">Kembali</button>
         </div>
     </section>
 </template>
