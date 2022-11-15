@@ -55,8 +55,10 @@ export default {
                         'Content-Type': 'application/json'
                     }
                 }).then(() => {
-                    console.log(this.dataSupplier);
+                    alert('Tambah Data Berhasil!')
                     this.$router.push("/supplier");
+                }).catch(()=>{
+                    alert('Gagal menambahkan data!');
                 })
             }
         }

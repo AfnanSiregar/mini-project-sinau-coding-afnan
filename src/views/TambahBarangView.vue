@@ -87,8 +87,10 @@ export default {
                         'Content-Type': 'application/json'
                     },
                 }).then(() => {
-                    console.log(this.dataBarang);
+                    alert('Tambah Data Berhasil!');
                     this.$router.push("/barang");
+                }).catch(()=>{
+                    alert('Gagal menambahkan data!');
                 })
             }
         }

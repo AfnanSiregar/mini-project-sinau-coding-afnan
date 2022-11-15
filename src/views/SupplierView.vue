@@ -31,7 +31,7 @@
                 </label>
                 <span class="pl-2"></span>
                 <button type="submit" class="bg-yellow-400 hover:bg-black/25 px-2 py-1 rounded-md">
-                    <ion-icon name="search" ></ion-icon>
+                    <ion-icon name="search" class="animate-bounce"></ion-icon>
                 </button>
                 <button @click="this.$router.go()" class="bg-red-600 text-white hover:bg-black/25 px-2 py-1 rounded-md">Refresh</button>
             </form>
@@ -61,11 +61,11 @@
                         <td class="text-center space-x-1">
                             <button class="hover:text-red-800 underline py-1 text-md text-red-500"
                                 @click="deleteSupplier(dataSupp.id)">
-                                <ion-icon name="trash-outline" class="text-3xl"></ion-icon>
+                                <ion-icon name="trash-outline" class="text-3xl hover:animate-pulse"></ion-icon>
                             </button>
                             <router-link class="hover:text-indigo-800 py-1 text-md text-indigo-500 underline"
                                 :to="`/update-supplier/${dataSupp.id}`">
-                                <ion-icon name="arrow-redo-outline" class="text-3xl"></ion-icon>                            
+                                <ion-icon name="arrow-redo-outline" class="text-3xl hover:animate-pulse"></ion-icon>                            
                             </router-link>
                         </td>
                     </tr>
@@ -87,7 +87,6 @@
 import NavbarVue from '../components/Navbar.vue';
 import SidebarVue from '../components/Sidebar.vue';
 import axios from 'axios';
-
 
 export default {
     components:{
@@ -165,9 +164,5 @@ export default {
             }
         }
     }
-    
 }
 </script>
-
-((offset-1*10)-1) 
-20-9 = 11

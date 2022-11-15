@@ -109,9 +109,11 @@ export default {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`,
                         'Content-Type': 'application/json'
                     }
-                }).then(({ data }) => {
-                    console.log(data);
+                }).then(() => {
+                    alert('Update Berhasil!');
                     this.$router.push("/barang");
+                }).catch(()=>{
+                    alert('Update Gagal!');
                 })
             }
         }

@@ -1,3 +1,7 @@
+<template>
+  <router-view/>
+  <FooterVue/>
+</template>
 <script>
 import FooterVue from './components/Footer.vue';
 export default{
@@ -15,7 +19,3 @@ export default{
   }
 }
 </script>
-<template>
-  <router-view/>
-  <FooterVue/>
-</template>

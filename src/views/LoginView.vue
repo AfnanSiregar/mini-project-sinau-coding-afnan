@@ -55,7 +55,7 @@ export default {
             }).then(async (response)=>{
                 localStorage.setItem("token", response.data.data.token);
                 localStorage.setItem("profileName", response.data.data.profileName);
-                alert("Login Berhasil!");
+                alert(`Selamat Datang ${localStorage.getItem('profileName')}!`);
                 this.$router.push('/barang');
             }).catch(() => {
                 alert('Username atau Password salah!');

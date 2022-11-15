@@ -5,7 +5,7 @@
             <img src="../assets/sinaucoding.png" class="w-16 md:w-28" alt="logo">
         </div>
         <div @click="open += 1" class="text-3xl text-black absolute right-8 top-3 cursor-pointer">
-            <ion-icon v-if="open % 2 == 1" name="close-outline"></ion-icon>
+            <ion-icon v-if="open % 2 == 1" name="close-outline" class="hover:animate-spin"></ion-icon>
             <ion-icon v-else name="menu"></ion-icon>
         </div>
         <ul v-if="open % 2 == 1" class="md:items-center md:py-5 absolute md:static text-white bg-blue-400 right-0 md:w-full w-full md:pl-0 pl-9 transition-all duration-75 ease-in">
@@ -26,5 +26,4 @@ export default{
         }
     }
 }
-
 </script>
