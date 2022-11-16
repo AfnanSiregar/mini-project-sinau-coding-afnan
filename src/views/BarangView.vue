@@ -129,7 +129,6 @@ export default {
                 }
             })
             this.result = await data.data;
-            console.log(this.result);
             if (this.offset > 1) {
                 this.awal = (this.offset * this.limit) - this.limit
             } else {

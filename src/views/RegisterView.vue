@@ -22,7 +22,7 @@
             <form @submit.prevent="register" class="flex flex-col p-4 gap-4 rounded-lg shadow">
                 <label for="username">
                     Username
-                    <input type="text" v-model="username" id="username" name="username" class="w-full border shadow py-2 px-3 focus:outline-blue-300" placeholder="Enter Username" required>
+                    <input type="text" v-model="username" id="username" name="username" autocomplete="username" class="w-full border shadow py-2 px-3 focus:outline-blue-300" placeholder="Enter Username" required>
                 </label>
                 <label for="profile">
                     Profile Name
@@ -30,7 +30,7 @@
                 </label>
                 <label for="password">
                     Password
-                    <input type="password" v-model="password" id="password" name="password" class="w-full border shadow py-2 px-3 focus:outline-blue-300" placeholder="Enter Password" required>
+                    <input type="password" v-model="password" id="password" name="password" autocomplete="current-password" class="w-full border shadow py-2 px-3 focus:outline-blue-300" placeholder="Enter Password" required>
                 </label>
                 <div class="flex flex-col items-center">
                     <button type="submit" class="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded-md text-white">Daftar</button>

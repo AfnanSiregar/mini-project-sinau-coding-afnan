@@ -63,7 +63,6 @@ export default {
                 namaSupplier:'',
             },
             name:'',
-            id:'',
             items: []
         };
     },
@@ -85,7 +84,6 @@ export default {
                 this.dataBarang.stok = data.data.stok
                 this.dataBarang.harga = data.data.harga
                 this.name = data.data?.supplier.namaSupplier
-                this.id = data.data?.supplier.id
             })
         },
         async getSupplier(){
