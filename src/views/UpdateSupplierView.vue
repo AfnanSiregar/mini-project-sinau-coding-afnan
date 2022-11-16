@@ -23,7 +23,7 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="harga">
                         No. Telp Supplier
                     </label>
-                    <input type="number" v-model="dataSupplier.noTelp" name="noTelp" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="noTelp" placeholder="Masukkan no Telp Supplier" required>
+                    <input type="text" onkeypress="return isNumberKey(event)" v-model="dataSupplier.noTelp" name="noTelp" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="noTelp" placeholder="Masukkan no Telp Supplier" required>
                 </div>
                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Update</button>
             </form>
@@ -61,7 +61,7 @@ export default {
             .then(({ data }) => {
                 this.dataSupplier.alamat = data.data.alamat
                 this.dataSupplier.namaSupplier = data.data.namaSupplier
-                this.dataSupplier.noTelp = data.data.noTelp                
+                this.dataSupplier.noTelp = data.data.noTelp     
             })    
         },
         async updateSupplier(){
