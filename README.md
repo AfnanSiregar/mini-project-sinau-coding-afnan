@@ -7,6 +7,10 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
 ## Langkah-langkah membuka project ini dari situs web
+
+  NOTE: Sangat disarankan utk menjalankan project ini secara lokal saja, karena jika kita login dan masuk ke tampilan dashboard, dan kita refresh halamannya, maka                halaman tersebut akan menjadi 404 Not Found
+  ![Screenshot (591)](https://user-images.githubusercontent.com/108184882/203224761-ac4051df-396e-44b6-a77b-084c911fc3db.png)
+  
   Project ini sudah di deploy melalui [Vercel](https://vercel.com/) dan sudah bisa di akses melalui URL, tekan [https://miniproject-sinaucoding-afnan.vercel.app/](https://miniproject-sinaucoding-afnan.vercel.app/) untuk mengaksesnya.
   Namun browser kita akan menganggap ini sebagai situs tidak aman dan akan stuck di tampilan login atau register saja.
   Untuk memaksa browser kita (Chrome) membuka situs ini yaitu dengan mengizinkan insecure content(konten tidak aman) dengan cara:
