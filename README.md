@@ -6,7 +6,7 @@
 <img src="https://avatars.githubusercontent.com/u/108184882?v=4" alt="AfnanSiregar" height= "144" width="144"/>
 </p>
 <p align="center">
-<a href="https://github.com/Pika4O4"><img title="Author" src="https://img.shields.io/badge/Author-AfnanSiregar-red.svg?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/AfnanSiregar"><img title="Author" src="https://img.shields.io/badge/Author-AfnanSiregar-red.svg?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center"><img src="https://profile-counter.glitch.me/{MPSC}/count.svg" alt="MPSC Visitor's Count" /></p>
 
