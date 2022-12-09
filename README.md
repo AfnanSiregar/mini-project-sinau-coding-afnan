@@ -3,7 +3,7 @@
 # Mini Project SinauCoding
   
 <p align="center">
-<img src="https://avatars.githubusercontent.com/u/108184882?v=4" alt="AfnanSiregar" height= "244.5" width="300"/>
+<img src="https://avatars.githubusercontent.com/u/108184882?v=4" alt="AfnanSiregar" height= "144" width="144"/>
 </p>
 <p align="center">
 <a href="https://github.com/Pika4O4"><img title="Author" src="https://img.shields.io/badge/Author-Pika4O4-red.svg?style=for-the-badge&logo=github"></a>
