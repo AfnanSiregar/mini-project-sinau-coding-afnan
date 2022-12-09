@@ -1,6 +1,18 @@
-# Vue 3 + Vite
+<div align="center">
+  
+# Mini Project SinauCoding
+  
+<p align="center">
+<img src="./HomeScreen/Anyapic.jpg" alt="Pika" height= "244.5" width="300"/>
+</p>
+<p align="center">
+<a href="https://github.com/Pika4O4"><img title="Author" src="https://img.shields.io/badge/Author-Pika4O4-red.svg?style=for-the-badge&logo=github"></a>
+</p>
+<p align="center"><img src="https://profile-counter.glitch.me/{MPSC}/count.svg" alt="MPSC Visitor's Count" /></p>
+
 
 This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+ </div>
 
 ## Recommended IDE Setup
 
